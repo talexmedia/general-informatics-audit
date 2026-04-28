@@ -144,17 +144,21 @@ body{background:var(--bg);min-height:100vh}
 .wi-title{font-family:'Oswald',sans-serif;font-weight:600;font-size:13px;color:var(--txt);letter-spacing:0.04em;margin-bottom:5px;line-height:1.3;text-transform:uppercase}
 .wi-desc{font-size:12.5px;color:var(--txt2);line-height:1.55}
 
-.numbers-block{background:var(--txt);color:#fff;border-radius:14px;padding:2.25rem 1.75rem;margin:1.75rem 0}
-.numbers-eyebrow{font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:0.16em;color:var(--o);text-transform:uppercase;font-weight:600;margin-bottom:0.5rem}
-.numbers-title{font-family:'Oswald',sans-serif;font-weight:600;font-size:26px;color:#fff;line-height:1.15;letter-spacing:0.02em;margin-bottom:0.85rem}
-.numbers-intro{font-size:13.5px;color:#C9C0B7;line-height:1.75;margin-bottom:1.5rem;max-width:600px}
-.numbers-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.numbers-block{background:var(--txt);color:#fff;border-radius:14px;padding:2.5rem 2rem 2.25rem;margin:2rem 0;position:relative;overflow:hidden;box-shadow:0 8px 32px rgba(26,24,22,0.18)}
+.numbers-block::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--o)}
+.numbers-block::after{content:"";position:absolute;top:-40px;right:-40px;width:140px;height:140px;border:1px solid rgba(232,90,12,0.18);border-radius:50%;pointer-events:none}
+.numbers-header{text-align:center;max-width:640px;margin:0 auto 1.75rem}
+.numbers-eyebrow{font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:0.18em;color:var(--o);text-transform:uppercase;font-weight:600;margin-bottom:0.65rem;display:inline-block;padding:4px 10px;border:1px solid rgba(232,90,12,0.4);border-radius:4px}
+.numbers-title{font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:42px;color:#fff;line-height:1;letter-spacing:0.02em;margin-bottom:0.85rem}
+.numbers-intro{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:15px;color:#C9C0B7;line-height:1.65;margin:0 auto;max-width:560px}
+.numbers-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;position:relative;z-index:1}
 @media(max-width:520px){.numbers-grid{grid-template-columns:1fr}}
-.num-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:1.4rem 1.2rem;display:flex;flex-direction:column;align-items:center;text-align:center}
-.num-figure{font-family:'Bebas Neue',sans-serif;font-size:52px;color:var(--o);line-height:1;letter-spacing:0.02em;margin-bottom:0.6rem}
-.num-title{font-family:'Oswald',sans-serif;font-weight:600;font-size:13px;color:#fff;letter-spacing:0.04em;margin-bottom:0.55rem;text-transform:uppercase;line-height:1.3}
-.num-desc{font-size:12.5px;color:#C9C0B7;line-height:1.6;text-align:left}
-.num-source{display:block;margin-top:10px;font-family:'Oswald',sans-serif;font-size:9px;letter-spacing:0.12em;color:#8B8278;text-transform:uppercase;align-self:flex-start}
+.num-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:1.5rem 1.25rem;display:flex;flex-direction:column;align-items:center;text-align:center;transition:border-color 0.2s,background 0.2s}
+.num-card:hover{border-color:rgba(232,90,12,0.5);background:rgba(232,90,12,0.06)}
+.num-figure{font-family:'Bebas Neue',sans-serif;font-size:58px;color:var(--o);line-height:1;letter-spacing:0.02em;margin-bottom:0.6rem;text-shadow:0 0 30px rgba(232,90,12,0.25)}
+.num-title{font-family:'Oswald',sans-serif;font-weight:600;font-size:12.5px;color:#fff;letter-spacing:0.06em;margin-bottom:0.6rem;text-transform:uppercase;line-height:1.35}
+.num-desc{font-size:12.5px;color:#C9C0B7;line-height:1.65;text-align:left}
+.num-source{display:block;margin-top:12px;font-family:'Oswald',sans-serif;font-size:9px;letter-spacing:0.14em;color:#8B8278;text-transform:uppercase;align-self:flex-start}
 .num-source a{color:inherit;text-decoration:none;border-bottom:1px dotted #8B8278}
 .num-source a:hover{color:var(--o);border-bottom-color:var(--o)}
 
@@ -389,38 +393,6 @@ body{background:var(--bg);min-height:100vh}
         <div class="wi-title">A Few Questions</div>
         <div class="wi-desc">What you might be wondering</div>
       </a>
-    </div>
-  </div>
-
-  <div class="numbers-block">
-    <div class="numbers-eyebrow">The Numbers</div>
-    <h2 class="numbers-title">Why Video, Why Now</h2>
-    <p class="numbers-intro">Four data points about how buyers, customers, and communities engage with video right now. None are specific to General Informatics. All four say the same thing: this is where the buying decision is being made.</p>
-    <div class="numbers-grid">
-      <div class="num-card">
-        <div class="num-figure">92%</div>
-        <div class="num-title">Of Consumers Watch Video Weekly</div>
-        <div class="num-desc">Across every device, age group, and market. Watching has overtaken reading as the default way most people learn, evaluate, and decide.</div>
-        <span class="num-source"><a href="https://www.wyzowl.com/video-marketing-statistics/" target="_blank" rel="noopener">Wyzowl 2024</a></span>
-      </div>
-      <div class="num-card">
-        <div class="num-figure">89%</div>
-        <div class="num-title">Have Been Convinced By A Video To Buy</div>
-        <div class="num-desc">Nearly nine in ten say a brand video has persuaded them to buy a product or service. Video isn't just attention. It's conversion.</div>
-        <span class="num-source"><a href="https://www.wyzowl.com/video-marketing-statistics/" target="_blank" rel="noopener">Wyzowl 2024</a></span>
-      </div>
-      <div class="num-card">
-        <div class="num-figure">70%</div>
-        <div class="num-title">Of B2B Buyers Watch Video Through The Decision Process</div>
-        <div class="num-desc">Before any form fill, before any sales call, buyers are vetting vendors on YouTube and LinkedIn. The decision is usually shaped before the first conversation.</div>
-        <span class="num-source"><a href="https://www.forrester.com/" target="_blank" rel="noopener">Forrester</a></span>
-      </div>
-      <div class="num-card">
-        <div class="num-figure">1.8M</div>
-        <div class="num-title">Words Of Information In One Minute Of Video</div>
-        <div class="num-desc">A single minute of video carries the informational density of roughly 1.8 million written words. Story, voice, expression, and context delivered at once.</div>
-        <span class="num-source">Dr. James McQuivey, Forrester</span>
-      </div>
     </div>
   </div>
 
@@ -824,6 +796,42 @@ body{background:var(--bg);min-height:100vh}
     <div class="concept-row">
       <div class="concept-label">What The Viewer Gets</div>
       <div class="concept-value">Evidence that a promise survived its follow-up visit. A vendor-agnostic diagnostic for evaluating any IT partner, given without expectation. Six to eight minutes that replace a pitch deck. The viewer leaves with a sharper question to ask the next vendor across the table, whether that vendor is General Informatics or not.</div>
+    </div>
+  </div>
+
+  <hr class="rule-orange"/>
+
+  <div class="numbers-block">
+    <div class="numbers-header">
+      <span class="numbers-eyebrow">The Numbers</span>
+      <h2 class="numbers-title">Why Video, Why Now</h2>
+      <p class="numbers-intro">Four data points about how buyers, customers, and communities engage with video right now. None are specific to General Informatics. All four say the same thing: this is where the buying decision is being made.</p>
+    </div>
+    <div class="numbers-grid">
+      <div class="num-card">
+        <div class="num-figure">92%</div>
+        <div class="num-title">Of Consumers Watch Video Weekly</div>
+        <div class="num-desc">Across every device, age group, and market. Watching has overtaken reading as the default way most people learn, evaluate, and decide.</div>
+        <span class="num-source"><a href="https://www.wyzowl.com/video-marketing-statistics/" target="_blank" rel="noopener">Wyzowl 2024</a></span>
+      </div>
+      <div class="num-card">
+        <div class="num-figure">89%</div>
+        <div class="num-title">Have Been Convinced By A Video To Buy</div>
+        <div class="num-desc">Nearly nine in ten say a brand video has persuaded them to buy a product or service. Video isn't just attention. It's conversion.</div>
+        <span class="num-source"><a href="https://www.wyzowl.com/video-marketing-statistics/" target="_blank" rel="noopener">Wyzowl 2024</a></span>
+      </div>
+      <div class="num-card">
+        <div class="num-figure">70%</div>
+        <div class="num-title">Of B2B Buyers Watch Video Through The Decision Process</div>
+        <div class="num-desc">Before any form fill, before any sales call, buyers are vetting vendors on YouTube and LinkedIn. The decision is usually shaped before the first conversation.</div>
+        <span class="num-source"><a href="https://www.forrester.com/" target="_blank" rel="noopener">Forrester</a></span>
+      </div>
+      <div class="num-card">
+        <div class="num-figure">1.8M</div>
+        <div class="num-title">Words Of Information In One Minute Of Video</div>
+        <div class="num-desc">A single minute of video carries the informational density of roughly 1.8 million written words. Story, voice, expression, and context delivered at once.</div>
+        <span class="num-source">Dr. James McQuivey, Forrester</span>
+      </div>
     </div>
   </div>
 
