@@ -144,22 +144,22 @@ body{background:var(--bg);min-height:100vh}
 .wi-title{font-family:'Oswald',sans-serif;font-weight:600;font-size:13px;color:var(--txt);letter-spacing:0.04em;margin-bottom:5px;line-height:1.3;text-transform:uppercase}
 .wi-desc{font-size:12.5px;color:var(--txt2);line-height:1.55}
 
-.numbers-block{background:var(--txt);color:#fff;border-radius:14px;padding:2.5rem 2rem 2.25rem;margin:2rem 0;position:relative;overflow:hidden;box-shadow:0 8px 32px rgba(26,24,22,0.18)}
-.numbers-block::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--o)}
-.numbers-block::after{content:"";position:absolute;top:-40px;right:-40px;width:140px;height:140px;border:1px solid rgba(232,90,12,0.18);border-radius:50%;pointer-events:none}
-.numbers-header{text-align:center;max-width:640px;margin:0 auto 1.75rem}
-.numbers-eyebrow{font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:0.18em;color:var(--o);text-transform:uppercase;font-weight:600;margin-bottom:0.65rem;display:inline-block;padding:4px 10px;border:1px solid rgba(232,90,12,0.4);border-radius:4px}
-.numbers-title{font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:42px;color:#fff;line-height:1;letter-spacing:0.02em;margin-bottom:0.85rem}
-.numbers-intro{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:15px;color:#C9C0B7;line-height:1.65;margin:0 auto;max-width:560px}
+.numbers-block{background:linear-gradient(135deg,#FBEAD7 0%,#F4DCBE 100%);color:var(--txt);border-radius:14px;padding:2.5rem 2rem 2.25rem;margin:2rem 0;position:relative;overflow:hidden;box-shadow:0 8px 32px rgba(232,90,12,0.08);border:1px solid rgba(232,90,12,0.18)}
+.numbers-block::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--o)}
+.numbers-block::after{content:"";position:absolute;top:-40px;right:-40px;width:160px;height:160px;border:1.5px solid rgba(232,90,12,0.22);border-radius:50%;pointer-events:none}
+.numbers-header{text-align:center;max-width:640px;margin:0 auto 1.75rem;position:relative;z-index:1}
+.numbers-eyebrow{font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:0.18em;color:var(--o);text-transform:uppercase;font-weight:600;margin-bottom:0.85rem;display:inline-block;padding:4px 10px;border:1px solid var(--o);border-radius:4px;background:rgba(255,255,255,0.5)}
+.numbers-title{font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:46px;color:var(--txt);line-height:1;letter-spacing:0.03em;margin-bottom:0.9rem}
+.numbers-intro{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:15.5px;color:var(--txt2);line-height:1.65;margin:0 auto;max-width:560px}
 .numbers-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;position:relative;z-index:1}
 @media(max-width:520px){.numbers-grid{grid-template-columns:1fr}}
-.num-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:1.5rem 1.25rem;display:flex;flex-direction:column;align-items:center;text-align:center;transition:border-color 0.2s,background 0.2s}
-.num-card:hover{border-color:rgba(232,90,12,0.5);background:rgba(232,90,12,0.06)}
-.num-figure{font-family:'Bebas Neue',sans-serif;font-size:58px;color:var(--o);line-height:1;letter-spacing:0.02em;margin-bottom:0.6rem;text-shadow:0 0 30px rgba(232,90,12,0.25)}
-.num-title{font-family:'Oswald',sans-serif;font-weight:600;font-size:12.5px;color:#fff;letter-spacing:0.06em;margin-bottom:0.6rem;text-transform:uppercase;line-height:1.35}
-.num-desc{font-size:12.5px;color:#C9C0B7;line-height:1.65;text-align:left}
-.num-source{display:block;margin-top:12px;font-family:'Oswald',sans-serif;font-size:9px;letter-spacing:0.14em;color:#8B8278;text-transform:uppercase;align-self:flex-start}
-.num-source a{color:inherit;text-decoration:none;border-bottom:1px dotted #8B8278}
+.num-card{background:rgba(255,255,255,0.7);border:1px solid rgba(232,90,12,0.18);border-radius:10px;padding:1.5rem 1.25rem;display:flex;flex-direction:column;align-items:center;text-align:center;transition:border-color 0.2s,background 0.2s,transform 0.2s}
+.num-card:hover{border-color:var(--o);background:#FFFFFF;transform:translateY(-2px)}
+.num-figure{font-family:'Bebas Neue',sans-serif;font-size:60px;color:var(--o);line-height:1;letter-spacing:0.02em;margin-bottom:0.6rem;text-shadow:0 2px 18px rgba(232,90,12,0.18)}
+.num-title{font-family:'Oswald',sans-serif;font-weight:600;font-size:12.5px;color:var(--txt);letter-spacing:0.06em;margin-bottom:0.6rem;text-transform:uppercase;line-height:1.35}
+.num-desc{font-size:12.5px;color:var(--txt2);line-height:1.65;text-align:left}
+.num-source{display:block;margin-top:12px;font-family:'Oswald',sans-serif;font-size:9px;letter-spacing:0.14em;color:var(--txt3);text-transform:uppercase;align-self:flex-start}
+.num-source a{color:inherit;text-decoration:none;border-bottom:1px dotted var(--txt3)}
 .num-source a:hover{color:var(--o);border-bottom-color:var(--o)}
 
 .deliverable{background:var(--surface);border:1px solid var(--border);border-radius:10px;margin-bottom:1rem;overflow:hidden}
